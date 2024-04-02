@@ -1,0 +1,9 @@
+.slides {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  /* Hide scrollbar for webkit-based browsers */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
