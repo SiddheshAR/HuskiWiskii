@@ -9,7 +9,7 @@ const FooterCol=({FootCol_1})=>{
 
   return(
     <div>
-          <h2 className="font-semibold my-4 text-gray-700 text-lg">{FooterHead.toUpperCase()}</h2>
+          <h2 className="font-semibold my-1 md:my-4 text-gray-700 text-lg">{FooterHead.toUpperCase()}</h2>
           <div className="list-none">
             
             {FooterItems.map((e,index)=><Link  to={`${e.link}`}  key={index}><li className="text-gray-600 text-md hover:text-orange-600 mb-3">{e.heading}</li></Link>)}
@@ -21,21 +21,21 @@ const FooterCol=({FootCol_1})=>{
 
 const FooterCTA = ()=>{
   return(
-    <div className="my-4 max-w-md">
+    <div className="my-4  lg:max-w-[350px] md:max-w-[250px]">
       <div>
         <h2 className="font-semibold uppercase text-black text-lg">Download HUFT APP</h2>
         <div className="flex flex-col gap-3 justify-around sm:flex-row my-4">
-            <img className=" w-[50%] h-[40px] lg:w-[80%]  lg:h-[70px]" src="https://cdn.shopify.com/s/files/1/0086/0795/7054/files/play_store.png?v=1683527854"></img>
-            <img className=" w-[50%] h-[40px] lg:w-[80%] lg:h-[70px]" src="https://cdn.shopify.com/s/files/1/0086/0795/7054/files/app_store.png?v=1683527854"></img>
+            <img className=" w-[50%] h-[auto] lg:w-[50%]  lg:h-[auto]" src="https://cdn.shopify.com/s/files/1/0086/0795/7054/files/play_store.png?v=1683527854"></img>
+            <img className=" w-[50%] h-[auto] lg:w-[50%] lg:h-[auto]" src="https://cdn.shopify.com/s/files/1/0086/0795/7054/files/app_store.png?v=1683527854"></img>
         </div>
       </div>
-      <div className="bg-gray-100 p-6">
-        <h2 className="font-semibold mb-2 text-black text-lg">Leave your Email and get offers</h2>
+      <div className="bg-gray-100 p-3 md:p-6">
+        <h2 className="font-semibold mb-2 text-black text-[16px] md:text-lg">Leave your Email and get offers</h2>
 
         <form>
           <div className="relative">
-            <input className="w-full px-3 rounded-md py-4 text-md" type="text" placeholder="Enter Your Email Address"></input>
-            <button className="absolute text-white rounded-r-md bg-orange-500 right-0 px-4 py-4 text-md">Add</button>
+            <input className="w-full px-3 rounded-md py-2 md:py-3 text-[14px] md:text-lg" type="text" placeholder="Enter Your Email"></input>
+            <button className="absolute text-white rounded-r-md bg-orange-500 right-0 px-4  py-2 md:py-3 text-[14px] md:text-lg">Add</button>
           </div>
         </form>
         <p className="py-4 text-sm text-gray-500">

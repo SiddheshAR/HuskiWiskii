@@ -123,12 +123,12 @@ const ProductGrid = ({category,sub_category,optionalCount=0,sortInclude=true}) =
   return (
     <div  className=" filter bg-orange-200 py-6 md:py-8 ">
     <div className=" mx-3 md:max-w-7xl  md:mx-10 relative flex flex-row">
-        <div className="flex flex-row gap-2 ml-8">
-            <h2 className="text-lg pt-1 mx-2 md:text-xl text-gray-800">Sorts By:</h2>
+        <div className="flex flex-row gap-2 ml-5">
+            <h2 className="text-[15px] pt-1 mx-2 md:text-xl text-gray-800">Sorts By:</h2>
             <div ref={sortRef} className="relative bg-white w-[180px] ">
-                <div 
+                <div onClick={()=>setActiveToggle(true)}
                 className="p-2 flex flex-row cursor-pointer justify-between " >
-                    <h3 onClick={()=>setActiveToggle(true)}>{sort[currentSort]}</h3>
+                    <h3 >{sort[currentSort]}</h3>
                     <MdOutlineArrowDropDown className="text-2xl"/>
                 </div>
                 <div className={` ${activeToggle===true?'block':'hidden'}  absolute w-[180px] bg-white p-2 flex flex-col gap-2 pt-0`}>

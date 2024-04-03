@@ -34,17 +34,17 @@ const MultiProductTab = ({category,sortInclude}) => {
 
         {/* <div className="text-center text-2xl text-gray-800 ">{category==="Dog"?<h2>Dog Products</h2>:<h2>Cats Products</h2>}</div> */}
         {/* Sub Categories */}
-        <div className="flex flex-row justify-center py-4 gap-8 ">
+        <div className="flex flex-row justify-center py-4 gap-6 md:gap-8 ">
         {ImgList.map((e,index)=>
                 <div key={index} onClick={()=>setSubCategories(index)} className="flex flex-row gap-10 text-2xl cursor-pointer group">
                     {category=="Dog"?(
-                    <div className="flex flex-col align-middle justify-center gap-3">
+                    <div className="flex flex-col align-middle justify-center gap-2 md:gap-3">
                         <img className=" w-14 h-14 md:w-20 md:h-20  mx-auto rounded-full" src={e.dogImg} ></img>
-                        <h4 className=" text-[13px] md:text-lg text-lg font-semibold text-[#20437a] text-center">{e.title} </h4>
+                        <h4 className=" text-[13px] md:text-lg  font-semibold text-[#20437a] text-center">{e.title} </h4>
                         <div className={`border-b-4 border-b-orange-500  m-auto duration-200 group-hover:w-full ${index===subCategories?'w-full':'w-0'}`}></div>
 
                     </div>):(
-                    <div className="flex flex-col align-middle justify-center gap-3 group ">
+                    <div className="flex flex-col align-middle justify-center gap-2 group ">
                         <img className=" w-14 h-14 md:w-20 md:h-20  mx-auto rounded-full" src={e.catImg} ></img>
                         <h4 className="text-[13px] md:text-lg font-semibold text-[#20437a] text-center">{e.title}</h4>
                         <div className={`border-b-4 border-b-orange-500  m-auto duration-200 group-hover:w-full ${index===subCategories?'w-full':'w-0'}`}></div>

@@ -16,9 +16,9 @@ const Navbar = () => {
   
     <nav className="bg-white">
         <div className="flex items-center font-medium justify-around ">
-            <div className="z-50 p-5 md:w-auto w-full flex justify-between">
+            <div className="z-50 p-2 md:p-5 md:w-auto w-full flex justify-between">
                 <Link to="./">
-                <img className="md:cursor-pointer h-14 pt-4 md:h-20" src={huskLogo}></img></Link>
+                <img className="md:cursor-pointer h-16 pt-1 md:pt-2 md:w-20 md:h-20" src={huskLogo}></img></Link>
                 <div className="md:hidden pt-4">
                 {/* <input type="text" name="Search" className="text-md w-[95%] text-gray-600  p-1  border border-orange-300 rounded-lg" placeholder={"Search"}/> */}
                 <div className="block md:hidden md:w-[50%]">

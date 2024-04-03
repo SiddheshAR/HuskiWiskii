@@ -7,12 +7,10 @@ const SearchBar = () => {
     const [searchResults, setSearchResults] = useState([]);
     const [showResults,setShowResults]=useState(false);
 
-    // const handleSearch =async() => {
     useEffect(()=>{
         function handleClickOutside(event){
             if(searchRef.current && !searchRef.current.contains(event.target)){
                 setShowResults(false);
-                // console.log("clicked outside.")
             }   
         }
         document.addEventListener('mousedown',handleClickOutside)
@@ -20,10 +18,9 @@ const SearchBar = () => {
             document.removeEventListener('mousedown',handleClickOutside);
         }
     },[])
-    // };
-    // const SearchQuery = (e)=>{
+
         function SearchFetch(m){
-            // const SearchKeywords = ["Dog Food","Dog","Cat Food","Cat Food","Dog Grooming","Cat Grooming","Dog Bed","Cat Bed"];
+
             const SearchKeywords = 
             [["Dog","/search/Dog/all"],
             ["Cat","/search/Cat/all"],
@@ -58,12 +55,9 @@ const SearchBar = () => {
         SearchFetch(e)
     }
 
-
-    // }
-    // console.log(searchResults);
   return (  
     <div className="relative" ref={searchRef}>
-        <input  type="text" name="Search" onChange={(e)=>HandleSearchQuery(e)} className="w-full text-md text-gray-600 p-2 border   focus:border-orange-500 focus:border-2 focus:outline-none border-orange-400 rounded-lg" placeholder={"Search"} value={searchKey}   />
+        <input  type="text" name="Search" onChange={(e)=>HandleSearchQuery(e)} className="w-full  md:w-full text-md text-gray-600 p-1 md:p-2 border   focus:border-orange-500 focus:border-2 focus:outline-none border-orange-400 rounded-lg" placeholder={"Search"} value={searchKey}   />
       
         {showResults &&  (
             <div className="absolute z-50 bg-white w-full">

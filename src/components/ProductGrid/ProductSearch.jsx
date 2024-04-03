@@ -113,7 +113,7 @@ const ProductSort = ({originalList,setItemsList}) => {
     <div className=" filter bg-orange-200 py-6 md:py-8 ">
     <div className=" mx-3  md:max-w-7xl md:mx-auto relative flex flex-row">
         <div className="flex flex-row gap-2">
-            <h2 className="text-lg pt-1 md:text-xl text-gray-800">Sort By:</h2>
+            <h2 className="text-[12px] pt-1 md:text-xl text-gray-800">Sort By:</h2>
             <div className="relative bg-white w-[180px] ">
                 <div onMouseOver={()=>setActiveToggle(true)}
                     onMouseOut={()=>setActiveToggle(false)}
